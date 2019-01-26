@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spark-examples_2.11" />
         <module name="sparkmllib" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="spark-examples_2.11" target="1.8" />
       <module name="sparkmllib" target="1.8" />
     </bytecodeTargetLevel>
   </component>

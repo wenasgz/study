@@ -4,6 +4,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/sparkmllib/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/pom.xml" />
       </list>
     </option>
   </component>
