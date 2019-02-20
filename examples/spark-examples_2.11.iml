@@ -119,7 +119,6 @@
     <orderEntry type="library" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet:2.22.2" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.containers:jersey-container-servlet-core:2.22.2" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.17.Final" level="project" />
-    <orderEntry type="library" name="Maven: io.netty:netty:3.9.9.Final" level="project" />
     <orderEntry type="library" name="Maven: com.clearspring.analytics:stream:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.5" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-jvm:3.1.5" level="project" />

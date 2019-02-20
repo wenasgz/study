@@ -1,23 +1,4 @@
-"VM Thread" os_prio=0 tid=0x00007f7214149800 nid=0x61e0 runnable
-
-"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00007f7214029000 nid=0x61dc runnable
-
-"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00007f721402b000 nid=0x61dd runnable
-
-"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00007f721402d000 nid=0x61de runnable
-
-"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00007f721402e800 nid=0x61df runnable
-
-"VM Periodic Task Thread" os_prio=0 tid=0x00007f7214c6c000 nid=0x61f7 waiting on condition
-
-JNI global references: 12
-
-Heap
- PSYoungGen      total 36864K, used 17267K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
-  eden space 31744K, 54% used [0x00000000d7380000,0x00000000d845ce48,0x00000000d9280000)
-  from space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
-  to   space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
- ParOldGen       total 84992K, used 0K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
-  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a00000,0x000000008ad00000)
- Metaspace       used 5193K, capacity 6042K, committed 6400K, reserved 1056768K
-  class space    used 648K, capacity 650K, committed 768K, reserved 1048576K
+good bad cool
+hadoop spark mllib
+good spark mllib
+cool spark bad
