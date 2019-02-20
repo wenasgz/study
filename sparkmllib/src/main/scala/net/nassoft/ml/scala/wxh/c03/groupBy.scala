@@ -28,7 +28,7 @@ object groupBy {
   }
 
   def myFilter(num: Int): String = { //自定义方法
-    if (num >= 3) "g1" else "g2"//条件
+    if (num >= 3) "g1" else "g2" //条件
   }
 
 

@@ -1,5 +1,5 @@
-import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.mllib.random.RandomRDDs._
+import org.apache.spark.{SparkConf, SparkContext}
 
 object testRandomRDD {
   def main(args: Array[String]) {
