@@ -14,6 +14,7 @@ val conf = new SparkConf()                                     //创建环境变
     val data = MLUtils.loadLabeledPoints(sc,"c://a.txt")				//读取数据集
     val model = NaiveBayes.train(data, 1.0)						//训练贝叶斯模型
 val test = Vectors.dense(7.3,2.9,6.3,1.8)						//创建待测定数据
-val result = model.predict(“测试数据归属在类别:” + test)			//打印结果
+val result = model.predict(test)
+    println("测试数据归属在类别:" + result)//打印结果
 }	
 }

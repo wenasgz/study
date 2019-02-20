@@ -1,3 +1,5 @@
+import org.apache.spark.{SparkConf, SparkContext}
+
 object testStratifiedSampling2 {
   def main(args: Array[String]) {
 val conf = new SparkConf()                                       //创建环境变量

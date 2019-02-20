@@ -1,3 +1,7 @@
+import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.mllib.stat.Statistics
+import org.apache.spark.{SparkConf, SparkContext}
+
 object testSummary{
   def main(args: Array[String]) {
 val conf = new SparkConf()                                       //创建环境变量

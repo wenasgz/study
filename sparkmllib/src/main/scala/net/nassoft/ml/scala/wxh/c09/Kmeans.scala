@@ -1,5 +1,6 @@
 import org.apache.spark.mllib.clustering.KMeans
 import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 
 object Kmeans {
@@ -10,7 +11,7 @@ val conf = new SparkConf()                                     //创建环境变
 .setAppName("Kmeans ")                              		//设定名称
     val sc = new SparkContext(conf)                                 //创建环境变量实例
     val data = MLUtils.loadLibSVMFile(sc, "c://Kmeans.txt")			//输入数据集
-val parsedData = data.map(s => Vectors.dense(s.split(' ').map(_.toDouble)))
+val parsedData = data.map(s => Vectors.dense(s.toString.split(' ').map(_.toDouble)))
 .cache()												//数据处理
 
     val numClusters = 2										//最大分类数

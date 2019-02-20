@@ -2,19 +2,21 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.classification.NaiveBayes
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.regression.LabeledPoint
+import org.apache.spark.mllib.util.MLUtils
 
-object Bayes {
+object BayesTest {
 
   def main(args: Array[String]) {
 val conf = new SparkConf()                                     //创建环境变量
 .setMaster("local")                                             //设置本地化处理
 .setAppName("BayesTest ")                              			//设定名称
     val sc = new SparkContext(conf)                                 //创建环境变量实例
-    val data = MLUtils.loadLabeledPoints(sc,"c://data.txt")			//读取数据集
-    val data = file.map { line =>								//处理数据
-      val parts = line.split(',')									//分割数据
-      LabeledPoint(parts(0).toDouble, 							//标签数据转换
-Vectors.dense(parts(1).split(' ').map(_.toDouble)))				//向量数据转换
+    val file = MLUtils.loadLabeledPoints(sc,"c://data.txt")			//读取数据集
+    val data = file.map { line => { //处理数据
+      val parts = line.toString.split(',') //分割数据
+      LabeledPoint(parts(0).toDouble, //标签数据转换
+        Vectors.dense(parts(1).split(' ').map(_.toDouble))) //向量数据转换
+    }
     }
 
     val splits = data.randomSplit(Array(0.7, 0.3), seed = 11L)			//对数据进行分配

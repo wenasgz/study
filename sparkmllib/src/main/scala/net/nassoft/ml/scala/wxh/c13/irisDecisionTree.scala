@@ -18,6 +18,6 @@ val conf = new SparkConf()                                     //创建环境变
     val model = DecisionTree.trainClassifier(data, numClasses, categoricalFeaturesInfo,
       impurity, maxDepth, maxBins)								//建立模型
     val test = Vectors.dense(Array(7.2,3.6,6.1,2.5))
-    println(model.predict(“预测结果是:” + test))
+    println("预测结果是:" + model.predict(test))
    }
 }

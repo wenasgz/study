@@ -12,7 +12,7 @@ val conf = new SparkConf()                                     //创建环境变
     val data = sc.textFile("c:/u.txt")							  	//获取数据集路径
     val parsedData = data.map { line =>							//开始对数据集处理
       val parts = line.split('|')									//根据逗号进行分区
-      LabeledPoint(parts(0).toDouble, Vectors.dense(parts(1).map(_.toDouble))
+      LabeledPoint(parts(0).toDouble, Vectors.dense(parts(1).map(_.toDouble).toArray))
     }.cache()                                                      //转化数据格式
     val model = SVMWithSGD.train(parsedData, 10)				//训练数据模型
     println(model.weights)									//打印权重

@@ -12,6 +12,6 @@ val conf = new SparkConf()                                     //创建环境变
     val pic = new PowerIterationClustering()						//创建专用类
       .setK(3)												//设定聚类数
       .setMaxIterations(20)									//设置迭代次数
-    val model = pic.run(data)									//创建模型
+    val model = pic.run(data.map(x => (3l,20l,x.toDouble)))									//创建模型
   }
 }

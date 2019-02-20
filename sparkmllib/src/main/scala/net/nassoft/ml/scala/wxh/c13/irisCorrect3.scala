@@ -2,7 +2,7 @@ import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.stat.Statistics
 import org.apache.spark.{SparkConf, SparkContext}
 
-object irisCorrect {
+object irisCorrect3 {
   def main(args: Array[String]) {
 val conf = new SparkConf()                                     //创建环境变量
 .setMaster("local")                                             //设置本地化处理

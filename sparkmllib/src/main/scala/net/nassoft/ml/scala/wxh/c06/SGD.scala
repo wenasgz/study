@@ -20,6 +20,6 @@ object SGD {
     dataSource.foreach(myMap =>{								//开始迭代
       sgd(myMap._1,myMap._2)								//输入数据
     })
-    println(“最终结果θ值为 ” + θ)								//显示结果
+    println("最终结果θ值为" + θ)								//显示结果
   }
 }

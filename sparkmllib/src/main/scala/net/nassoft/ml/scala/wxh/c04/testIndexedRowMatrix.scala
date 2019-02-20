@@ -6,7 +6,7 @@ object testIndexedRowMatrix {
   def main(args: Array[String]) {
 val conf = new SparkConf()                                       //创建环境变量
 .setMaster("local")                                               //设置本地化处理
-setAppName("testIndexedRowMatrix")						  //设定名称
+.setAppName("testIndexedRowMatrix")						  //设定名称
        val sc = new SparkContext(conf)                               //创建环境变量实例
     val rdd = sc.textFile("c://a.txt")                                     //创建RDD文件路径
       .map(_.split(' ')                                                //按“ ”分割

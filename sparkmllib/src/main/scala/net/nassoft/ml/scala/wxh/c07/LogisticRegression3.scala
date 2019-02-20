@@ -4,7 +4,7 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 
-object LinearRegression3{
+object LogisticRegression3{
 val conf = new SparkConf()                                     //创建环境变量
 .setMaster("local")                                             //设置本地化处理
 .setAppName("LogisticRegression3")                              //设定名称
