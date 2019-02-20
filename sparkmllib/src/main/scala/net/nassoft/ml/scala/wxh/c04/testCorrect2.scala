@@ -14,7 +14,7 @@ val conf = new SparkConf()                                       //创建环境�
     val rddY = sc.textFile("c://y.txt")                                   //读取数据
       .flatMap(_.split(' ')                                             //进行分割
       .map(_.toDouble))                                            //转化为Double类型
-    val correlation: Double = Statistics.corr(rddX, rddY，” spearman “)    //使用斯皮尔曼计算不同数据之间的相关系数
+    val correlation: Double = Statistics.corr(rddX, rddY, "spearman")    //使用斯皮尔曼计算不同数据之间的相关系数
     println(correlation)                                              //打印结果
   }
 }
