@@ -1,4 +1,4 @@
-
+package net.nassoft.ml.scala.wxh.c04
 
 import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.stat.Statistics
