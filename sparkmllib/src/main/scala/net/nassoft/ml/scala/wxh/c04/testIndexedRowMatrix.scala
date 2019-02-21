@@ -10,7 +10,10 @@ object testIndexedRowMatrix {
       .setMaster("local") //设置本地化处理
       .setAppName("testIndexedRowMatrix") //设定名称
     val sc = new SparkContext(conf) //创建环境变量实例
-    val rdd = sc.textFile("c://a.txt") //创建RDD文件路径
+    // 获取当前运行路径
+    val userPath = System.getProperty("user.dir")
+    //读取文件
+    val rdd = sc.textFile(userPath+ "/sparkmllib/src/main/resources/data/wxh/c04/testRowMatrix.txt") //创建RDD文件路径
       .map(_.split(' ') //按“ ”分割
       .map(_.toDouble)) //转成Double类型
       .map(line => Vectors.dense(line)) //转化成向量存储

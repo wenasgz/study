@@ -20,5 +20,6 @@ object testRowMatrix {
     val rm = new RowMatrix(rdd) //读入行矩阵
     println(rm.numRows()) //打印列数
     println(rm.numCols()) //打印行数
+    rm.rows.foreach(println) //打印内容
   }
 }
