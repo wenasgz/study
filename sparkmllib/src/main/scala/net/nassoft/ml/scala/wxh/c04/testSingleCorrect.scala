@@ -10,7 +10,10 @@ object testSingleCorrect {
       .setMaster("local") //设置本地化处理
       .setAppName("testSingleCorrect ") //设定名称
     val sc = new SparkContext(conf) //创建环境变量实例
-    val rdd = sc.textFile("c://x.txt") //读取数据文件
+    // 获取当前运行路径
+    val userPath = System.getProperty("user.dir")
+    //读取文件
+    val rdd = sc.textFile(userPath+ "/sparkmllib/src/main/resources/data/wxh/c04/testSingleCorrect.txt") //创建RDD文件路径
       .map(_.split(' ') //切割数据
       .map(_.toDouble)) //转化为Double类型
       .map(line => Vectors.dense(line)) //转为向量

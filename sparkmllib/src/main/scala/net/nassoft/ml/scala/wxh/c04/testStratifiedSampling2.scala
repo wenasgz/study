@@ -8,7 +8,10 @@ object testStratifiedSampling2 {
       .setMaster("local") //设置本地化处理
       .setAppName("testSingleCorrect2 ") //设定名称
     val sc = new SparkContext(conf) //创建环境变量实例
-    val data = sc.textFile("c://a.txt") //读取数据
+    // 获取当前运行路径
+    val userPath = System.getProperty("user.dir")
+    //读取文件
+    val data = sc.textFile(userPath+ "/sparkmllib/src/main/resources/data/wxh/c04/testStratifiedSampling2.txt") //创建RDD文件路径
       .map(row => { //开始处理
       if (row.length == 3) //判断字符数
         (row, 1) //建立对应map
