@@ -23,11 +23,11 @@ object testStratifiedSampling2 {
       * sampleByKeyExact需要比sampleByKey中使用的每层简单随机抽样更多的资源，但将提供99.99％置信度的确切采样大小。
       */
     val fractions = Map(1 -> 0.3,2->0.7) //设定抽样格式
-    val approxSample = data.sampleByKey(withReplacement = false, fractions) //计算抽样样本
+    val approxSample = data.sampleByKey(withReplacement = true, fractions) //计算抽样样本
     approxSample.foreach(println) //打印结果
 
     println("-------------------------")
-    val approxSampleExt = data.sampleByKeyExact(withReplacement = false, fractions) //计算抽样样本
+    val approxSampleExt = data.sampleByKeyExact(withReplacement = true, fractions) //计算抽样样本
     approxSampleExt.foreach(println) //打印结果
 
 
